@@ -1,0 +1,3 @@
+- [] setup sst project structure
+- [] add tailwindcss
+- [] setup typography
