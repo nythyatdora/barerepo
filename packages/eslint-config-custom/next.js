@@ -39,5 +39,11 @@ module.exports = {
   rules: {
     'import/no-default-export': 'off',
     '@typescript-eslint/no-unsafe-member-access': 'off',
+    '@typescript-eslint/no-unnecessary-type-assertion': 'off',
+    'import/no-extraneous-dependencies': 'off',
+    'unicorn/filename-case': 'off',
+    '@typescript-eslint/no-unsafe-call': 'off',
+    '@typescript-eslint/no-unsafe-assignment': 'off',
+    'eslint-comments/require-description': 'off',
   },
 };
