@@ -45,6 +45,7 @@ module.exports = {
     '@typescript-eslint/no-unsafe-call': 'off',
     '@typescript-eslint/no-unsafe-assignment': 'off',
     'eslint-comments/require-description': 'off',
+    'react/jsx-no-useless-fragment': 'off',
     'react/no-unknown-property': [
       'off',
       {
