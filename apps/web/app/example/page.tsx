@@ -9,14 +9,14 @@ interface Example {
   name: string;
 }
 
-interface ExamplesPayload {
+interface ExamplePayload {
   items: Example[];
   total: number;
 }
 
-const getExamples = cache(async (): Promise<ExamplesPayload> => {
-  const examplesPath = path.join(process.cwd(), "app/examples/(react)");
-  const examples = (await fs.promises.readdir(examplesPath))
+const getExamples = cache(async (): Promise<ExamplePayload> => {
+  const examplePath = path.join(process.cwd(), "app/example/(react)");
+  const example = (await fs.promises.readdir(examplePath))
     .filter((foldername) => foldername.endsWith(".js"))
     .map((foldername) => {
       return {
@@ -25,8 +25,8 @@ const getExamples = cache(async (): Promise<ExamplesPayload> => {
     });
 
   return {
-    items: examples,
-    total: examples.length,
+    items: example,
+    total: example.length,
   };
 });
 
