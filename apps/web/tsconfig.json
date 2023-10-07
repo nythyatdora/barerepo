@@ -3,10 +3,14 @@
   "compilerOptions": {
     "plugins": [{ "name": "next" }],
     "paths": {
+      "@/analytics": ["./analytics/index.ts"],
+      "@/api/*": ["./app/api/*"],
       "@/assets/*": ["./assets/*"],
       "@/components/*": ["./components/*"],
       "@/fonts/*": ["./fonts/*"],
-      "@/utilities/*": ["./utilities/*"]
+      "@/hooks/*": ["./hooks/*"],
+      "@/utilities/*": ["./utilities/*"],
+      "@/types/*": ["./types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

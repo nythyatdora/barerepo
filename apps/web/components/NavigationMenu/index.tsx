@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 "use client";
 import { tv } from "tva";
 import NextLink from "next/link";
@@ -8,18 +7,8 @@ const base = tv({
   slots: {
     list: "flex flex-col gap-8",
     listItem:
-      "flex flex-row font-serif text-8xl items-center cursor-pointer dark:text-white",
+      "flex flex-row font-serif text-8xl items-center cursor-pointer dark:text-white hover:underline",
     dot: "w-[16px] h-[16px] rounded-full border-2 border-black mt-[-16px] mr-4",
-  },
-  variants: {
-    disabled: {
-      true: {
-        listItem: "line-through",
-      },
-      false: {
-        listItem: "hover:underline",
-      },
-    },
   },
 });
 
@@ -41,22 +30,17 @@ function NavigationMenu(): JSX.Element {
           </NextLink>
 
           <ul className={styles.list()}>
-            <li className={styles.listItem({ disabled: false })}>
+            <li className={styles.listItem()}>
               <NextLink href="/">/</NextLink>
             </li>
 
-            <li className={styles.listItem({ disabled: false })}>
-              <NextLink href="/examples">/examples</NextLink>
+            <li className={styles.listItem()}>
+              <NextLink href="/contact">/contact</NextLink>
             </li>
-
-            <li className={styles.listItem({ disabled: true })}>/blogs</li>
-
-            <li className={styles.listItem({ disabled: true })}>/contact</li>
-
-            <li className={styles.listItem({ disabled: true })}>/login</li>
           </ul>
         </div>
       </nav>
+
       <style global jsx>
         {`
           html,

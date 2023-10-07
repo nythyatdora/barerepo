@@ -37,3 +37,7 @@ next-env.d.ts
 # sst
 .open-next
 .sst
+
+# env
+.env
+.env.production

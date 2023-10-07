@@ -38,3 +38,6 @@ yarn-error.log*
 
 # test
 __snapshots__
+
+# others
+todo.md

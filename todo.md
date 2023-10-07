@@ -1,3 +1,11 @@
-- [] setup sst project structure
+- [x] setup sst project structure
 - [x] add tailwindcss
 - [x] setup typography
+- [x] preload color scheme before render to avoid flickering
+- [ ] add contact
+- [ ] add spotify example (now listening and history)
+- [ ] add a favicon
+- [ ] add opengraph
+- [ ] blogs integrate with notion cms
+- [ ] design typography system
+- [ ] design mdx components (h1, h2, ... , img, code, blockquote, ...)

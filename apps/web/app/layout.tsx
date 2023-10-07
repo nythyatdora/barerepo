@@ -1,9 +1,12 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import cx from "cx";
+import type { Metadata } from "next";
 import { Plus_Jakarta_Sans as PlusJakartaSans } from "next/font/google";
 import { editorialNew } from "@/fonts/editorial-new";
 import { NavigationSession } from "@/components/NavigationSession";
+import { ColorSchemeScript } from "@/components/ColorSchemeScript";
+import { ColorScheme } from "@/components/ColorScheme";
+import { GoogleTagManager } from "@/components/GoogleTagManager";
 
 const plusJakartaSans = PlusJakartaSans({
   subsets: ["latin"],
@@ -24,7 +27,7 @@ export default function RootLayout(props: RootProps): JSX.Element {
   const { children, modal } = props;
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
       </head>
@@ -35,6 +38,9 @@ export default function RootLayout(props: RootProps): JSX.Element {
           plusJakartaSans.variable,
         )}
       >
+        <GoogleTagManager measurementId={process.env.GA_MEASUREMENT_ID} />
+        <ColorSchemeScript />
+        <ColorScheme defaultColorScheme="light" />
         <NavigationSession />
         {children}
         {modal}

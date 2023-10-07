@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 import { withTV } from "tva/transformer";
 
 const config: Config = withTV({
@@ -17,7 +18,15 @@ const config: Config = withTV({
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ addBase, theme }) => {
+      addBase({
+        ".bg-dark": {
+          backgroundColor: theme("backgroundColor.black"),
+        },
+      });
+    }),
+  ],
 });
 
 export default config;

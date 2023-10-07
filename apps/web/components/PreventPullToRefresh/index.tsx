@@ -1,4 +1,4 @@
-/* eslint-disable react/no-unknown-property */
+"use client";
 function PreventPullToRefresh(): JSX.Element {
   return (
     <style global jsx>

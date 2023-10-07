@@ -1,15 +1,17 @@
+import React from "react";
 import cx from "cx";
-import React, { useState } from "react";
+import { useColorScheme } from "@/components/ColorScheme";
 
 function ToggleTheme(
   props: React.ComponentProps<"button">,
 ): React.ReactElement {
   const { className } = props;
-  const [isDark, setIsDark] = useState(false);
+  const [colorScheme, setColorScheme] = useColorScheme();
+  const isDark = colorScheme === "dark";
 
   const onClick = (): void => {
-    setIsDark(!isDark);
-    document.body.classList.toggle("dark");
+    const next = isDark ? "light" : "dark";
+    setColorScheme(next);
   };
 
   return (
