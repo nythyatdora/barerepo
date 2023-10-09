@@ -35,7 +35,7 @@ function NavigationMenu(): JSX.Element {
             </li>
 
             <li className={styles.listItem()}>
-              <NextLink href="/examples">/examples</NextLink>
+              <NextLink href="/example">/example</NextLink>
             </li>
 
             <li className={styles.listItem()}>

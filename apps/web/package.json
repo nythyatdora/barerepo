@@ -17,6 +17,7 @@
     "@mdx-js/mdx": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@next/mdx": "^13.5.3",
+    "@studio-freight/react-lenis": "^0.0.36",
     "autoprefixer": "10.4.16",
     "clsx": "^2.0.0",
     "cx": "npm:clsx@^2.0.0",

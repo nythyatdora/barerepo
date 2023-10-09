@@ -14,7 +14,7 @@ function Layout(props: BaseProps): JSX.Element {
       <Header />
 
       <div className="flex min-h-[100vh] flex-col">
-        <header className="flex flex-col gap-2 border-b-2 border-black p-4 pb-4 dark:border-white">
+        <header className="fixed left-4 top-4 z-10 flex w-fit flex-col gap-2 border-2 border-black bg-white p-4 pb-4 dark:border-white dark:bg-black">
           <h1 className="font-serif text-4xl tracking-tight dark:text-white">{`file: ${pathname}`}</h1>
         </header>
 
